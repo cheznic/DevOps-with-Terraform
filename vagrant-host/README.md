@@ -1,5 +1,5 @@
 ## Configure local VM using Vagrant and VirtualBox
-This section describes what's needed to build a vagrant project using Ubuntu.  This Vagrant VM will be named 'local-vm1'.  will identify the needed dependencies for running vagrant and how to install each.  After Vagrant is installed, the vagrant project is downloaded and built locally.  The result is a running VM on your Mac with a specific configuration.  The VM includes Terraform, AWS CLI, and Ansible.
+This section describes what's needed to build a vagrant project using Ubuntu.  This Vagrant VM will be named 'local-vm1'.  will identify the needed dependencies for running vagrant and how to install each.  After Vagrant is installed, the vagrant project is downloaded and built locally.  The result is a running VM on your Mac with a specific configuration.  The VM will include Terraform, AWS CLI, and Ansible.
 
 ### Initial Setup
 You'll need HomeBrew, VirtualBox, Vagrant, and Git installed locally to begin.
@@ -22,10 +22,15 @@ $ brew cask install vagrant
 
 Download vagrant project for training
 ```bash
-$ git clone https://github.com/wardviaene/devops-box
+$ git clone https://github.com/cheznic/DevOps-with-Terraform/
 ```
 
-Start vagrant image
+Change directory
+```bash
+$ cd vagrant-host
+```
+
+Start vagrant image (this will take some time)
 ```bash
 $ vagrant up
 ```
@@ -40,7 +45,7 @@ Host local-vm1
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile [project-folder]/.vagrant/machines/local-vm1/virtualbox/private_key
+  IdentityFile [project-folder]/vagrant-host/.vagrant/machines/local-vm1/virtualbox/private_key
   IdentitiesOnly yes
   LogLevel FATAL
 ```
@@ -50,7 +55,7 @@ Connect to 'local-vm1'
 $ vagrant ssh
 ```
 
-## tools included
+## Tools installed in the VM
 - Terraform
 - AWS CLI
 - Ansible
