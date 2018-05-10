@@ -6,8 +6,8 @@ You'll need HomeBrew, VirtualBox, Vagrant, and Git installed locally to begin.
 
 Update HomeBrew and all formulae.
 ```shell
-	$ brew update
-	$ brew upgrade
+$ brew update
+$ brew upgrade
 ```
 
 Verify VirtualBox is up to date using Brew.
