@@ -5,18 +5,18 @@ This section describes what's needed to build a vagrant project using Ubuntu.  T
 You'll need HomeBrew, VirtualBox, Vagrant, and Git installed locally to begin.
 
 Update HomeBrew and all formulae.
-```shell
+```bash
 $ brew update
 $ brew upgrade
 ```
 
 Verify VirtualBox is up to date using Brew.
-```shell
+```bash
 $ brew cask update VirtualBox
 ```
 
 Install Vagrant with Brew.
-```shell
+```bash
 $ brew cask install vagrant
 ```
 
@@ -26,7 +26,7 @@ $ git clone https://github.com/wardviaene/devops-box
 ```
 
 Start vagrant image
-```shell
+```bash
 $ vagrant up
 ```
 
