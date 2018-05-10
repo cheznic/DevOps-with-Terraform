@@ -21,8 +21,8 @@ $ brew cask install vagrant
 ```
 
 Download vagrant project for training
-```shell
-$ git clone <https://github.com/wardviaene/devops-box>
+```bash
+$ git clone https://github.com/wardviaene/devops-box
 ```
 
 Start vagrant image
