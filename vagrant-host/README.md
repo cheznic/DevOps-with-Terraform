@@ -31,10 +31,26 @@ $ vagrant up
 ```
 
 Check config before attempting to ssh into local-vm1.  Should look like:
+```bash
+$ vagrant ssh-config
+Host local-vm1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile [project-folder]/.vagrant/machines/local-vm1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+```
 
+Connect to 'local-vm1'
+```bash
+$ vagrant ssh
+```
 
-
-# tools included
-* Terraform
-* AWS CLI
-* Ansible
+## tools included
+- Terraform
+- AWS CLI
+- Ansible
