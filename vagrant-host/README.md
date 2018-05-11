@@ -9,27 +9,22 @@ You'll need HomeBrew to complete the following steps.  If HomeBrew is not instal
 $ brew update
 $ brew upgrade
 ```
-
 1. Install VirtualBox if you don't have it.
 ```bash
 $ brew cask install VirtualBox
 ```
-
 1. Install Vagrant if you don't have it.
 ```bash
 $ brew cask install vagrant
 ```
-
 1. Download vagrant project for training
 ```bash
 $ git clone https://github.com/cheznic/DevOps-with-Terraform/
 ```
-
 1. Change directory
 ```bash
 $ cd vagrant-host
 ```
-
 1. Start vagrant image (this will take some time)
 ```bash
 $ vagrant up
