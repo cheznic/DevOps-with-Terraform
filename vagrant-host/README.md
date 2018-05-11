@@ -1,41 +1,41 @@
 ## Configure local VM using Vagrant and VirtualBox
-This section describes how to quickly build a Vagrant project running Ubuntu Xenial64.  In this case Vagrant will run on VirtualBox (VB), and the new instance will be named 'devops-vb'.  The needed dependencies within the VB will be installed via script.  The result is a running VB on your Mac with Terraform, AWS CLI, and Ansible installed.
+This section describes how to quickly build a Vagrant project running Ubuntu Xenial64.  In this case Vagrant will run on VirtualBox (VB), and the new instance will be named 'devops-vb'.  Additional packages within the VB will be installed via script.  The result is a running VB on your Mac with Terraform, AWS CLI, and Ansible installed.
 
 ### Initial Setup
-You'll need HomeBrew to complete the following steps.  If HomeBrew is not installed go to https://docs.brew.sh/ and follow the instructions to get started.
+You'll need HomeBrew to complete the following steps.  If HomeBrew is not installed go to <https://docs.brew.sh/> and follow the instructions to get started.
 
-If HomeBrew was installed, update HomeBrew and all formulae.
-```console
+1. If HomeBrew is installed, update HomeBrew and all formulae.
+```bash
 $ brew update
 $ brew upgrade
 ```
 
-Verify VirtualBox is up to date using Brew.
+1. Install VirtualBox if you don't have it.
 ```bash
-$ brew cask update VirtualBox
+$ brew cask install VirtualBox
 ```
 
-Install Vagrant with Brew.
+1. Install Vagrant if you don't have it.
 ```bash
 $ brew cask install vagrant
 ```
 
-Download vagrant project for training
+1. Download vagrant project for training
 ```bash
 $ git clone https://github.com/cheznic/DevOps-with-Terraform/
 ```
 
-Change directory
+1. Change directory
 ```bash
 $ cd vagrant-host
 ```
 
-Start vagrant image (this will take some time)
+1. Start vagrant image (this will take some time)
 ```bash
 $ vagrant up
 ```
 
-Check config before attempting to ssh into devops-vb.  Should look like:
+1. Review config for devops-vb.  Should look similar to:
 ```bash
 $ vagrant ssh-config
 Host devops-vb
@@ -50,10 +50,18 @@ Host devops-vb
   LogLevel FATAL
 ```
 
-Connect to 'devops-vb'
+1. Connect to 'devops-vb'
 ```bash
 $ vagrant ssh
 ```
+
+1. Confirm that Terraform is installed on the VB.
+```bash
+vagrant@devops-vb:~$ terraform
+usage: terraform [--version] [--help] <command> [args]
+...
+```
+
 
 ### Tools installed in the VM
 - Terraform
