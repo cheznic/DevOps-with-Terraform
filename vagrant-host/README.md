@@ -4,33 +4,33 @@ This section describes how to quickly build a Vagrant project running Ubuntu Xen
 ### Initial Setup
 You'll need HomeBrew to complete the following steps.  If HomeBrew is not installed go to <https://docs.brew.sh/> and follow the instructions to get started.
 
-1. If HomeBrew is installed, update HomeBrew and all formulae.
+* If HomeBrew is installed, update HomeBrew and all formulae.
 ```bash
 $ brew update
 $ brew upgrade
 ```
-2. Install VirtualBox if you don't have it.
+* Install VirtualBox if you don't have it.
 ```bash
 $ brew cask install VirtualBox
 ```
-3. Install Vagrant if you don't have it.
+* Install Vagrant if you don't have it.
 ```bash
 $ brew cask install vagrant
 ```
-1. Download vagrant project for training
+* Download vagrant project for training
 ```bash
 $ git clone https://github.com/cheznic/DevOps-with-Terraform/
 ```
-1. Change directory
+* Change directory
 ```bash
 $ cd vagrant-host
 ```
-1. Start vagrant image (this will take some time)
+* Start vagrant image (this will take some time)
 ```bash
 $ vagrant up
 ```
 
-1. Review config for devops-vb.  Should look similar to:
+* Review config for devops-vb.  Should look similar to:
 ```bash
 $ vagrant ssh-config
 Host devops-vb
@@ -45,18 +45,17 @@ Host devops-vb
   LogLevel FATAL
 ```
 
-1. Connect to 'devops-vb'
+* Connect to 'devops-vb'
 ```bash
 $ vagrant ssh
 ```
 
-1. Confirm that Terraform is installed on the VB.
+* Confirm that Terraform is installed on the VB.
 ```bash
 vagrant@devops-vb:~$ terraform
 usage: terraform [--version] [--help] <command> [args]
 ...
 ```
-
 
 ### Tools installed in the VM
 - Terraform
