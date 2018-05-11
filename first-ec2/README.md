@@ -44,12 +44,12 @@ Create the following environment variables which will be used to provide program
 export TF_VAR_access_key="123abc"
 export TF_VAR_secret_key="abc123"
 ```
-All environment variables will be consider by Terraform.  In the provider file access_key and secret_key are defined as variables.  Terraform will inject the environment variables as needed during execution.
+All environment variables starting with 'TF_VAR_' will be consider by Terraform.  In the provider file access_key and secret_key are defined as variables.  Terraform will inject the environment variables as needed during execution.
 
 ### Create your ec2
-From within the the working folder where you created the ```*.rf``` files run the command ```$ terraform plan```.
+Using your Terminal app, change directory to the the working folder where you created the ```*.tf``` files.  Run the command ```$ terraform plan```.
 
-This will run a no operation execution of your files.  the output is something like the following:
+This will run a no operation execution of all ```*.tf``` files within the current folder.  Dependencies and sequence is calculated by Terraform.  The output is something like the following:
 ```text
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
@@ -90,7 +90,7 @@ Terraform will perform the following actions:
 
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
-Terraform update will create the ec2.
+Terraform apply will create the ec2.
 
 ```bash
 $ terraform apply
