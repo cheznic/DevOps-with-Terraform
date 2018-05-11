@@ -9,11 +9,11 @@ You'll need HomeBrew to complete the following steps.  If HomeBrew is not instal
 $ brew update
 $ brew upgrade
 ```
-1. Install VirtualBox if you don't have it.
+2. Install VirtualBox if you don't have it.
 ```bash
 $ brew cask install VirtualBox
 ```
-1. Install Vagrant if you don't have it.
+3. Install Vagrant if you don't have it.
 ```bash
 $ brew cask install vagrant
 ```
